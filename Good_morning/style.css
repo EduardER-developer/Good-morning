@@ -1,0 +1,144 @@
+html {
+	font-size:62.5%;
+	box-sizing: border-box;
+	height:100%
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	background:radial-gradient(at bottom right, @1, @2 );
+	padding:10rem;
+	font-size:2rem;
+	font-family: "template-gothic", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-style: normal;
+}
+
+.dashboard {
+	background:white;
+	padding:3rem;
+	border-radius:4rem; 
+	box-shadow:
+		-1rem -1rem 1rem fade(@2,50%),
+		-2rem -2rem fade(@1,50%),
+		1rem 1rem 1rem fade(@2,10%),
+		2rem 2rem fade(@1,50%);
+	display:flex;
+	flex-wrap:wrap;
+	gap:3rem;
+	overflow:hidden;
+} 
+
+h2{ 
+	margin:0;
+	font-size:2.1rem
+}
+ul {
+	margin:1.5rem 0 0;
+	padding:0 0 0 1.5rem;
+	li {
+		margin:1rem 0 0;
+	}
+}
+p { margin:2rem 0 0}
+
+.dashboard > div {
+	border:.3rem solid black;
+	min-width:300px;
+	max-width:500px;
+	border-radius:2rem;
+	padding:2rem;
+	position:relative;
+	overflow:hidden;
+	h2 {
+		background:
+			linear-gradient(120deg, 
+				darken(@2,20%) 0%, 
+				darken(@2,20%) 25%, 
+				@2 50%, @2 50%,
+			@3 75.3%);
+		margin:-2rem -2rem 1rem;
+		padding:1rem 2rem;
+		border-bottom:.3rem solid black;
+		color:white;
+	}
+	&.profile {
+		min-width:100%;
+		border:none;
+		padding:0;
+		overflow:visible; 
+		h2 {
+			font-size:14rem;
+			background:none;
+			border:none;
+			font-family: "puffin-arcade-yoko", sans-serif;
+			font-weight: 800;
+			font-style: normal;
+			line-height:0.8;
+			margin:6rem 0 3rem;
+			position:relative;
+			z-index:2;
+			color:@4;
+			text-shadow:0 .4rem 0 #ffab40;
+			span {
+				font-size:8rem
+			}
+		}
+		.marquee {
+			position:absolute;
+			top:0rem;right:-15rem;
+			transform:rotate(45deg) scaley(0.75);
+			background:@4;
+			padding: 1rem 2rem 2rem;
+			width: 50rem;
+			background:fade(@3,50%);
+			overflow:hidden;
+			p {
+				position:relative;
+				width:100%;
+				animation: marquee 10s linear infinite; 
+				text-transform:uppercase;
+				letter-spacing:.2rem;
+				font-size:3rem; 
+				@keyframes marquee {
+					0% { transform:translatex(95%) } 
+					100% {transform:translatex(-90%) }
+				}
+			}
+		}
+	}
+
+	h2:not(.profile h2)  { 
+		text-transform:uppercase;
+		font-family: "clicker-compressed", sans-serif;
+		font-weight: 600;
+		font-style: italic;
+		letter-spacing:0.2rem;
+		font-size:4rem;
+		text-shadow:.2rem .2rem 0 black;
+		span {
+			font-style:normal
+		}
+	}
+	
+	table {
+		border-spacing:1rem
+	}
+	
+	th { 
+		text-align:left; 
+		border-bottom:.2rem solid black; 
+		padding:0 0 1rem
+	}
+	tr { }
+	td { }
+}
+
+.calories div {
+	margin:2rem 0 0
+}
+
+
